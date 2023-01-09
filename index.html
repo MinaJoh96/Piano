@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Piano</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        background-color: lightblue;
+      }
+
+      .piano {
+        background-color: darkred;
+        width: 35em;
+        height: 12em;
+        padding: 15px;
+        margin: auto;
+        justify-content: center;
+        display: flex;
+      }
+
+      .white-keys {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+      }
+
+      .white {
+        background-color: white;
+        width: 4em;
+        height: 12em;
+        border-radius: 0px 0px 10px 10px;
+      }
+
+      .black-keys {
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
+        position: absolute;
+      }
+
+      .black {
+        background-color: black;
+        width: 2.5em;
+        height: 8em;
+        border-radius: 9px;
+      }
+
+      .white:hover,
+      .black:hover {
+        box-shadow: 3px 3px 5px 6px #ccc;
+      }
+    </style>
+    <script>
+      //White
+      let playWhite1 = () => new Audio('keys/Piano.pp.C5.mp3').play();
+      let playWhite2 = () => new Audio('keys/Piano.pp.D5.mp3').play();
+      let playWhite3 = () => new Audio('keys/Piano.pp.E5.mp3').play();
+      let playWhite4 = () => new Audio('keys/Piano.pp.F5.mp3').play();
+      let playWhite5 = () => new Audio('keys/Piano.pp.G5.mp3').play();
+      let playWhite6 = () => new Audio('keys/Piano.pp.A5.mp3').play();
+      let playWhite7 = () => new Audio('keys/Piano.pp.B5.mp3').play();
+
+      //* black
+      let playBlack1 = () => new Audio('keys/Piano.pp.Db5.mp3').play();
+      let playBlack2 = () => new Audio('keys/Piano.pp.Eb5.mp3').play();
+      let playBlack3 = () => new Audio('keys/Piano.pp.Gb5.mp3').play();
+      let playBlack4 = () => new Audio('keys/Piano.pp.Ab5.mp3').play();
+      let playBlack5 = () => new Audio('keys/Piano.pp.Bb5.mp3').play();
+    </script>
+    <div class="piano">
+      <div class="black-keys">
+        <div class="black" onclick="playBlack1()"></div>
+        <div class="black" onclick="playBlack2()"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="black" onclick="playBlack3()"></div>
+        <div class="black" onclick="playBlack4()"></div>
+        <div class="black" onclick="playBlack5()"></div>
+      </div>
+      <div class="white-keys">
+        <div onclick="playWhite1()" class="white"></div>
+        <div onclick="playWhite2()" class="white"></div>
+        <div onclick="playWhite3()" class="white"></div>
+        <div onclick="playWhite4()" class="white"></div>
+        <div onclick="playWhite5()" class="white"></div>
+        <div onclick="playWhite6()" class="white"></div>
+        <div onclick="playWhite7()" class="white"></div>
+      </div>
+    </div>
+  </body>
+</html>
